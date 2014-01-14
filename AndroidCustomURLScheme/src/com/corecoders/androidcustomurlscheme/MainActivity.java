@@ -25,37 +25,7 @@ public class MainActivity extends Activity {
 	}
 
 	
-	
-	public void sendEmail(View v) {
 
-		
-		
-	
-		String html = "<a href='app.myscheme.content://www.google.com/terms.html'>terms and conditons</a>";
-	
-		Spanned htmlSpanned = Html.fromHtml(html);
-		Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
-		emailIntent.setType("text/html");
-		emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
-				new String[] {});
-		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
-				"New Puzzle on PhotoGuessaroo!");
-		
-		
-		emailIntent.putExtra(android.content.Intent.EXTRA_TEXT,
-				htmlSpanned);
-		
-		
-		emailIntent.putExtra("exit_on_sent", true);
-		// emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(imageUrl));
-		startActivityForResult(
-				Intent.createChooser(emailIntent, "Send mail..."),
-				3454345);
-		
-		
-		System.out.println(htmlSpanned);
-	}
-	
 	public void sendSMS(View V) {
 
 		long a= 94473022779L;
